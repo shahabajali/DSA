@@ -12,8 +12,9 @@ public:
         for(  int i =0 ;  i<say.length(); i++){
             char ch =  say[i];
             int count = 1;
+            // int j = i;
            
-            while( i< say.length() && say[i] == say[i +1] ){
+            while( i< say.length()-1 && say[i] == say[i +1] ){
                 count++;
                 i++;
             }

@@ -9,7 +9,7 @@ function sleep(millis) {
 // Example
 let t = Date.now();
 sleep(100).then(() => {
-  console.log(Date.now() - t); // ~100
+  console.log(Date.now() ); // ~100
 });
 
 

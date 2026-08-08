@@ -11,7 +11,7 @@
 class Solution {
      int sizes(ListNode* head){
         int size = 0;
-        ListNode* tem =  head;
+        ListNode* tem =  head;        //  find total size of linklist
         while(tem !=nullptr){
             tem =  tem->next;
             size++;
@@ -40,7 +40,7 @@ public:
           //  new tail 
 
          ListNode* newTail =  head;
-         for( int i =1;i<size-k;i++){
+         for( int i =1;i<size-k;i++){   //  (size-k) itarate  to last k node  
             newTail =  newTail->next;
          }
 

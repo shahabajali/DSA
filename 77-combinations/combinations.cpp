@@ -1,14 +1,14 @@
 class Solution {
 public:
     void helper(int n, int k,vector<vector<int>> &ans,vector<int> &result, int i){
-        if(result.size() == k){
-            ans.push_back(result);
-            return;
+        if(result.size() == k){ // check size 2number to
+            ans.push_back(result);     
+            return;  //  not execute  helper noe pop_back result
         }
        for(int j = i;j<=n;j++){
-        result.push_back(j);
-        helper(n,k,ans,result,j+1);
-        result.pop_back();
+        result.push_back(j); // first 1 2       
+        helper(n,k,ans,result,j+1); // 1 2     // number 1
+        result.pop_back();// pop_back number3
        }
 
     }

@@ -11,29 +11,22 @@
  */
 class Solution {
 public:
-    TreeNode* helper(vector<int>& nums, int left, int right) {
-        
-        // No element
-        if (left > right) {
-            return nullptr;
-        }
-
-        // Middle element
-        int mid = left + (right - left) / 2;
-
-        // Middle becomes root
-        TreeNode* root = new TreeNode(nums[mid]);
-
-        // Left half -> left subtree
-        root->left = helper(nums, left, mid - 1);
-
-        // Right half -> right subtree
-        root->right = helper(nums, mid + 1, right);
-
-        return root;
+   TreeNode*  helper( vector<int>& nums,int left,int  right){
+    if( left > right){
+        return nullptr;
     }
+    int mid =  left+(right-left)/2;
+    TreeNode*  root =  new TreeNode(nums[mid]);
+     // left 
+     root->left =  helper(nums,left,mid-1);  //  all part from left side
+     //right 
+     root->right =  helper(nums,mid+1,right); // all right part 
+     return root;
 
+   }
+    
     TreeNode* sortedArrayToBST(vector<int>& nums) {
-        return helper(nums, 0, nums.size() - 1);
+        return helper(nums,0,nums.size()-1);
+        
     }
 };

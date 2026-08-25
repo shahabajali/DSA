@@ -1,7 +1,7 @@
 class Solution {
 public:
     void helper(int n, int k,vector<vector<int>> &ans,vector<int> &result, int i){
-        if(result.size() == k){ // check size 2number to
+        if(result.size() == k ){ // check size 2number to
             ans.push_back(result);     
             return;  //  not execute  helper noe pop_back result
         }
